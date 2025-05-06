@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  alpine1:
+    image: alpine:latest
+    command: sh -c "while true; do sleep 3600; done"
+    volumes:
+      - test_vol1:/data
+    networks:
+      - test_net1
+
+  alpine2:
+    image: alpine:latest
+    command: sh -c "while true; do sleep 3600; done"
+    volumes:
+      - test_vol2:/data
+    networks:
+      - test_net2
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - test_vol3:/usr/share/nginx/html
+    networks:
+      - test_net1
+      - test_net2
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - test_vol4:/data
+    networks:
+      - test_net3
+
+volumes:
+  test_vol1:
+  test_vol2:
+  test_vol3:
+  test_vol4:
+  test_vol5:
+
+networks:
+  test_net1:
+  test_net2:
+  test_net3:
