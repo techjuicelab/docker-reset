@@ -158,7 +158,7 @@ $ ./docker-reset_v1.00.sh
 1. `~/.zshrc` 파일을 엽니다.
 
    ```bash
-   open ~/.zshrc
+   nano ~/.zshrc
    ```
 
 2. 파일 맨 아래에 다음 줄을 추가합니다.
