@@ -165,7 +165,7 @@ $ ./docker-reset_v1.00.sh
 
    ```bash
    # Docker 리셋 스크립트 별칭
-   alias docker-reset='/Users/techjuice/Documents/dev/docker/docker-reset/docker-reset_v1.00.sh'
+   alias docker-reset='yourpath/docker-reset_v1.00.sh'
    ```
 
 3. 터미널을 재시작하거나 다음 명령어로 설정을 적용합니다.
