@@ -151,6 +151,31 @@ $ ./docker-reset_v1.00.sh
 2. 코드 스타일 및 문서 가이드라인 준수 (Bash 스크립트 스타일)
 3. 새로운 기능 제안 및 버그 리포트 환영
 
+## Oh My Zsh 별칭 설정 (선택 사항)
+
+`oh-my-zsh`를 사용하는 경우, 다음과 같이 `~/.zshrc` 파일에 별칭(alias)을 추가하면 어느 위치에서든 `docker-reset` 명령어로 스크립트를 실행할 수 있습니다.
+
+1. `~/.zshrc` 파일을 엽니다.
+
+   ```bash
+   open ~/.zshrc
+   ```
+
+2. 파일 맨 아래에 다음 줄을 추가합니다.
+
+   ```bash
+   # Docker 리셋 스크립트 별칭
+   alias docker-reset='/Users/techjuice/Documents/dev/docker/docker-reset/docker-reset_v1.00.sh'
+   ```
+
+3. 터미널을 재시작하거나 다음 명령어로 설정을 적용합니다.
+
+   ```bash
+   source ~/.zshrc
+   ```
+
+이제 터미널에서 `docker-reset`만 입력하여 스크립트를 실행할 수 있습니다.
+
 ## 라이선스
 
 MIT 라이선스
